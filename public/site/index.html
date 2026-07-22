@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kindora — Build Your Impact Portfolio</title>
+  <meta name="description" content="Kindora connects organizations with volunteers and helps young people build a verified impact portfolio for universities, scholarships, and careers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Loading -->
+  <div class="loader" id="loader"><div class="loader-ring"></div></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Mouse glow -->
+  <div class="mouse-glow" id="mouseGlow"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark"></span>
+        <span class="logo-text">Kindora</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how">How it Works</a>
+        <a href="#organizations">Organizations</a>
+        <a href="#volunteers">Volunteers</a>
+        <a href="#stories">Success Stories</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="btn btn-ghost">Login</button>
+        <button class="btn btn-primary ripple">Sign Up</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grid-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-left reveal">
+        <div class="chip"><span class="chip-dot"></span> Verified by 120+ universities</div>
+        <h1 class="hero-title">
+          Build Your<br/>
+          <span class="gradient-text">Impact Portfolio.</span>
+        </h1>
+        <p class="hero-sub">
+          Kindora connects ambitious students with verified volunteering opportunities — and turns every hour into a credential universities, scholarships, and employers actually recognize.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg ripple">Get Started →</button>
+          <button class="btn btn-outline btn-lg">Explore Opportunities</button>
+        </div>
+        <div class="hero-meta">
+          <div class="avatars">
+            <span style="background:linear-gradient(135deg,#4F46E5,#06B6D4)"></span>
+            <span style="background:linear-gradient(135deg,#22C55E,#06B6D4)"></span>
+            <span style="background:linear-gradient(135deg,#F59E0B,#EF4444)"></span>
+            <span style="background:linear-gradient(135deg,#4F46E5,#22C55E)"></span>
+          </div>
+          <div>
+            <strong id="typingText"></strong>
+            <div class="muted">Joined this week</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="hero-illus">
+          <div class="glass-card main-card">
+            <div class="mc-head">
+              <div class="mc-avatar"></div>
+              <div>
+                <div class="mc-name">Amina Yusuf</div>
+                <div class="mc-role">Impact Portfolio · Lv. 7</div>
+              </div>
+              <div class="mc-badge">Verified</div>
+            </div>
+            <div class="mc-stats">
+              <div><span>184</span><small>Hours</small></div>
+              <div><span>12</span><small>Certs</small></div>
+              <div><span>96</span><small>Score</small></div>
+            </div>
+            <div class="mc-bar"><div class="mc-bar-fill"></div></div>
+            <div class="mc-tags">
+              <span>Medical</span><span>Community</span><span>Education</span>
+            </div>
+          </div>
+
+          <div class="float-card fc-1">
+            <div class="fc-icon" style="background:linear-gradient(135deg,#4F46E5,#06B6D4)">⏱</div>
+            <div><small>Volunteer Hours</small><strong>184.5h</strong></div>
+          </div>
+          <div class="float-card fc-2">
+            <div class="fc-icon" style="background:linear-gradient(135deg,#22C55E,#10B981)">✓</div>
+            <div><small>Verified Certificates</small><strong>12 issued</strong></div>
+          </div>
+          <div class="float-card fc-3">
+            <div class="fc-icon" style="background:linear-gradient(135deg,#F59E0B,#EF4444)">✦</div>
+            <div><small>AI Matching</small><strong>98% fit</strong></div>
+          </div>
+          <div class="float-card fc-4">
+            <div class="fc-icon" style="background:linear-gradient(135deg,#06B6D4,#4F46E5)">◎</div>
+            <div><small>Impact Score</small><strong>96 / 100</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / Stats -->
+  <section class="stats reveal">
+    <div class="container stats-grid">
+      <div class="stat"><div class="stat-num" data-count="1000">0</div><span>+</span><p>Organizations</p></div>
+      <div class="stat"><div class="stat-num" data-count="25000">0</div><span>+</span><p>Volunteers</p></div>
+      <div class="stat"><div class="stat-num" data-count="500000">0</div><span>+</span><p>Volunteer Hours</p></div>
+      <div class="stat"><div class="stat-num" data-count="120">0</div><span>+</span><p>Universities Recognize</p></div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Features</span>
+        <h2 class="section-title">Everything you need to <span class="gradient-text">turn impact into opportunity</span>.</h2>
+        <p class="section-sub">A complete platform for volunteers and organizations — from discovery to verified credentials.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal"><div class="f-icon">👤</div><h3>Verified Volunteer Profile</h3><p>Own an identity that universities and employers can trust.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">⏱</div><h3>Hours Tracking</h3><p>Automatic tracking approved by the organization.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">🎓</div><h3>Verified Certificates</h3><p>Tamper-proof certificates for every experience.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">✦</div><h3>AI Opportunity Matching</h3><p>Personalized matches based on skills and availability.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">★</div><h3>Organization Reviews</h3><p>Two-way ratings keep the ecosystem trustworthy.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">✉</div><h3>Recommendation Letters</h3><p>Request letters signed by real organizations.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">◎</div><h3>Impact Portfolio</h3><p>A shareable link that showcases your entire journey.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">🏆</div><h3>Gamification</h3><p>XP, levels and streaks that keep you engaged.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">📊</div><h3>Leaderboard</h3><p>Compete with peers in your school or city.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">🎖</div><h3>Achievement Badges</h3><p>Earn badges from bronze to Community Hero.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">💼</div><h3>Career Opportunities</h3><p>Get discovered by employers hiring purpose-driven talent.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">🎯</div><h3>Scholarships</h3><p>Access scholarships that reward real-world impact.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">🧑‍💻</div><h3>Internships</h3><p>Internship offers unlocked by your portfolio.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">🌱</div><h3>Youth Programs</h3><p>Curated programs for teens and university students.</p></div>
+        <div class="feature-card reveal"><div class="f-icon">📈</div><h3>Volunteer Analytics</h3><p>Insights on hours, categories, and growth over time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section alt" id="how">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">How it works</span>
+        <h2 class="section-title">From sign-up to <span class="gradient-text">verified impact</span> in 7 steps.</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-line"></div>
+        <div class="tl-step reveal"><div class="tl-num">1</div><h4>Create Account</h4><p>Sign up in seconds with your email or school.</p></div>
+        <div class="tl-step reveal"><div class="tl-num">2</div><h4>Build Profile</h4><p>Add skills, languages and interests.</p></div>
+        <div class="tl-step reveal"><div class="tl-num">3</div><h4>Find Opportunities</h4><p>AI surfaces roles matched to you.</p></div>
+        <div class="tl-step reveal"><div class="tl-num">4</div><h4>Apply</h4><p>One-click applications with your Kindora profile.</p></div>
+        <div class="tl-step reveal"><div class="tl-num">5</div><h4>Volunteer</h4><p>Show up, contribute, log your hours.</p></div>
+        <div class="tl-step reveal"><div class="tl-num">6</div><h4>Verified Certificate</h4><p>Organization signs — you get a verifiable credential.</p></div>
+        <div class="tl-step reveal"><div class="tl-num">7</div><h4>Grow Your Portfolio</h4><p>Share a link that opens doors.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizations -->
+  <section class="section" id="organizations">
+    <div class="container two-col">
+      <div class="reveal">
+        <span class="eyebrow">For Organizations</span>
+        <h2 class="section-title">Run your volunteer program like a <span class="gradient-text">product team</span>.</h2>
+        <p class="section-sub">Post opportunities, manage applicants, approve hours and issue certificates — all from one dashboard.</p>
+      </div>
+      <div class="org-grid">
+        <div class="org-card reveal"><h4>Post Opportunities</h4><p>Publish roles in minutes with templates.</p></div>
+        <div class="org-card reveal"><h4>Manage Applications</h4><p>Filter, shortlist and message applicants.</p></div>
+        <div class="org-card reveal"><h4>Track Attendance</h4><p>QR check-in with GPS verification.</p></div>
+        <div class="org-card reveal"><h4>Approve Hours</h4><p>One-tap approval creates trust.</p></div>
+        <div class="org-card reveal"><h4>Generate Certificates</h4><p>Beautiful, verifiable, on-brand.</p></div>
+        <div class="org-card reveal"><h4>Analytics Dashboard</h4><p>Measure your community impact.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Volunteers profile preview -->
+  <section class="section alt" id="volunteers">
+    <div class="container two-col">
+      <div class="profile-card reveal">
+        <div class="pc-cover"></div>
+        <div class="pc-body">
+          <div class="pc-avatar"></div>
+          <h3>Layla Ahmed</h3>
+          <div class="muted">Pre-med Student · Volunteer since 2023</div>
+          <div class="pc-stats">
+            <div><strong>212h</strong><small>Volunteered</small></div>
+            <div><strong>14</strong><small>Certificates</small></div>
+            <div><strong>98</strong><small>Impact Score</small></div>
+          </div>
+          <div class="pc-section"><small>Skills</small><div class="tags"><span>First Aid</span><span>Teaching</span><span>Public Speaking</span><span>Fundraising</span></div></div>
+          <div class="pc-section"><small>Languages</small><div class="tags"><span>English</span><span>Arabic</span><span>French</span></div></div>
+          <div class="pc-section"><small>Badges</small><div class="badges">
+            <div class="badge b-bronze">🥉</div>
+            <div class="badge b-silver">🥈</div>
+            <div class="badge b-gold">🥇</div>
+            <div class="badge b-hero">★</div>
+          </div></div>
+          <div class="pc-section"><small>Recommendation</small><p class="quote">“Layla was instrumental in our clinic drive — reliable, kind, and skilled.” — Red Crescent</p></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">For Volunteers</span>
+        <h2 class="section-title">A profile that <span class="gradient-text">opens doors</span>.</h2>
+        <p class="section-sub">Kindora profiles are designed like a modern résumé — with verified proof for everything you claim.</p>
+        <ul class="check-list">
+          <li>✓ Verified hours & certificates</li>
+          <li>✓ Skills endorsed by organizations</li>
+          <li>✓ Recommendation letters on demand</li>
+          <li>✓ Public share link for admissions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Section -->
+  <section class="section ai-section">
+    <div class="container two-col">
+      <div class="reveal">
+        <span class="eyebrow">Kindora AI</span>
+        <h2 class="section-title">Opportunities that <span class="gradient-text">match you</span>, not the other way around.</h2>
+        <p class="section-sub">Our matching engine learns your goals, skills and availability to surface only the roles that grow your portfolio.</p>
+      </div>
+      <div class="ai-dash reveal">
+        <div class="ai-head"><div class="ai-dot"></div> Kindora AI · live</div>
+        <div class="ai-row"><span>Weekend Opportunities</span><b>96%</b><div class="ai-bar"><i style="width:96%"></i></div></div>
+        <div class="ai-row"><span>Medical Events</span><b>91%</b><div class="ai-bar"><i style="width:91%"></i></div></div>
+        <div class="ai-row"><span>English Speaking</span><b>88%</b><div class="ai-bar"><i style="width:88%"></i></div></div>
+        <div class="ai-row"><span>Community Projects</span><b>82%</b><div class="ai-bar"><i style="width:82%"></i></div></div>
+        <div class="ai-foot">3 new matches near you</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gamification -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Gamification</span>
+        <h2 class="section-title">Progress you can <span class="gradient-text">feel</span>.</h2>
+      </div>
+      <div class="gam-grid">
+        <div class="gam-card reveal">
+          <div class="progress-ring">
+            <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="pr-bg"/><circle cx="60" cy="60" r="52" class="pr-fg"/></svg>
+            <div class="pr-label"><strong>Lv 7</strong><small>Volunteer</small></div>
+          </div>
+        </div>
+        <div class="gam-card reveal">
+          <h4>XP Progress</h4>
+          <div class="xp-bar"><div class="xp-fill"></div></div>
+          <div class="muted">2,340 / 3,000 XP to Level 8</div>
+          <div class="badges big">
+            <div class="badge b-bronze">🥉</div>
+            <div class="badge b-silver">🥈</div>
+            <div class="badge b-gold">🥇</div>
+            <div class="badge b-hero">★</div>
+          </div>
+        </div>
+        <div class="gam-card reveal">
+          <h4>Community Hero</h4>
+          <p class="muted">Top 1% of volunteers this month.</p>
+          <div class="leader">
+            <div><span>1</span> Amina Y.<b>184h</b></div>
+            <div><span>2</span> Omar K.<b>171h</b></div>
+            <div class="me"><span>3</span> You<b>168h</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success stories -->
+  <section class="section" id="stories">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Success Stories</span>
+        <h2 class="section-title">Real impact. <span class="gradient-text">Real outcomes.</span></h2>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card reveal">
+          <div class="story-head"><div class="story-avatar" style="background:linear-gradient(135deg,#4F46E5,#06B6D4)"></div><div><h4>Sara Malik</h4><small>Harvard University</small></div></div>
+          <div class="stars">★★★★★</div>
+          <p>“My Kindora portfolio was the story of my application. It showed who I actually am — not just my grades.”</p>
+        </div>
+        <div class="story-card reveal">
+          <div class="story-head"><div class="story-avatar" style="background:linear-gradient(135deg,#22C55E,#10B981)"></div><div><h4>Yusuf Rahman</h4><small>Oxford University</small></div></div>
+          <div class="stars">★★★★★</div>
+          <p>“I received two scholarships tied directly to volunteer work I logged on Kindora.”</p>
+        </div>
+        <div class="story-card reveal">
+          <div class="story-head"><div class="story-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444)"></div><div><h4>Nour Habib</h4><small>NYU Abu Dhabi</small></div></div>
+          <div class="stars">★★★★★</div>
+          <p>“The recommendation letters were signed by real organizations. Admissions officers noticed.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section alt" id="pricing">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pricing</span>
+        <h2 class="section-title">Simple pricing for <span class="gradient-text">every stage</span>.</h2>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <h3>Free</h3>
+          <div class="price">$0<small>/month</small></div>
+          <p class="muted">For individual volunteers getting started.</p>
+          <ul><li>✓ Verified profile</li><li>✓ Hours tracking</li><li>✓ Public share link</li><li>✓ Basic AI matching</li></ul>
+          <button class="btn btn-outline ripple">Get Started</button>
+        </div>
+        <div class="price-card featured reveal">
+          <div class="pop">Most Popular</div>
+          <h3>Pro</h3>
+          <div class="price">$9<small>/month</small></div>
+          <p class="muted">For serious portfolio builders.</p>
+          <ul><li>✓ Everything in Free</li><li>✓ Priority AI matches</li><li>✓ Unlimited certificates</li><li>✓ Recommendation letters</li><li>✓ Analytics dashboard</li></ul>
+          <button class="btn btn-primary ripple">Upgrade to Pro</button>
+        </div>
+        <div class="price-card reveal">
+          <h3>Enterprise</h3>
+          <div class="price">Custom</div>
+          <p class="muted">For organizations & universities.</p>
+          <ul><li>✓ Unlimited seats</li><li>✓ Verified issuer</li><li>✓ SSO & compliance</li><li>✓ Dedicated success</li></ul>
+          <button class="btn btn-outline ripple">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="section-title">Answers to <span class="gradient-text">common questions</span>.</h2>
+      </div>
+      <div class="faq">
+        <div class="faq-item reveal"><button class="faq-q">Is Kindora free for volunteers?<span>+</span></button><div class="faq-a"><p>Yes. Our Free plan covers verified profiles, hours tracking and certificates.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">How are certificates verified?<span>+</span></button><div class="faq-a"><p>Each certificate is signed cryptographically by the issuing organization.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Do universities recognize the portfolio?<span>+</span></button><div class="faq-a"><p>120+ universities partner with Kindora and accept our verified portfolios.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Can organizations issue custom certificates?<span>+</span></button><div class="faq-a"><p>Yes. Pro & Enterprise plans include fully branded certificate templates.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">How does AI matching work?<span>+</span></button><div class="faq-a"><p>We combine skills, availability and goals to surface only relevant roles.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section alt" id="contact">
+    <div class="container narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title">Let's build <span class="gradient-text">impact together</span>.</h2>
+      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="row">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your full name" /></div>
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@company.com" /></div>
+        </div>
+        <div class="field"><label>Organization</label><input type="text" name="org" placeholder="Optional" /></div>
+        <div class="field"><label>Message</label><textarea name="message" rows="5" placeholder="How can we help?"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-lg ripple">Send Message →</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo"><span class="logo-mark"></span><span class="logo-text">Kindora</span></a>
+        <p class="muted small">Build Your Impact Portfolio.</p>
+        <form class="news" onsubmit="event.preventDefault()">
+          <input type="email" placeholder="Your email" />
+          <button class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+      <div><h5>Product</h5><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#how">How it Works</a></div>
+      <div><h5>Company</h5><a href="#stories">Success Stories</a><a href="#contact">Contact</a><a href="#faq">FAQ</a></div>
+      <div><h5>Follow</h5>
+        <div class="socials">
+          <a href="#" aria-label="X">𝕏</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright"><small>© 2026 Kindora Labs. All rights reserved.</small></div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="./script.js"></script>
+</body>
+</html>
