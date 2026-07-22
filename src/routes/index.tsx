@@ -1,24 +1,29 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Kindora — Build Your Impact Portfolio" },
+      { name: "description", content: "Kindora connects organizations with volunteers and helps young people build a verified impact portfolio recognized by universities, scholarships and employers." },
+      { property: "og:title", content: "Kindora — Build Your Impact Portfolio" },
+      { property: "og:description", content: "Verified volunteering, tracked hours, and portfolio-ready certificates for the next generation of changemakers." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useEffect(() => {
+    window.location.replace("/site/index.html");
+  }, []);
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#fff", color: "#111827", fontFamily: "Inter, system-ui, sans-serif" }}>
+      <a href="/site/index.html" style={{ color: "#4F46E5", fontWeight: 600 }}>
+        Opening Kindora…
+      </a>
     </div>
   );
 }
